@@ -29,6 +29,19 @@ void krijoLlogari() {
         cout << "Nuk mund te krijoni me shume llogari!\n";
         return;
     }
+
+    Llogari l;
+    l.id = numriLlogarive + 1;
+    cout << "Emri: ";
+    cin >> l.emri;
+    cout << "Mbiemri: ";
+    cin >> l.mbiemri;
+    l.bilanci = 0;
+    l.aktive = true;
+    l.historia = "Llogaria u krijua me sukses.\n";
+
+    llogarite[numriLlogarive] = l;
+    numriLlogarive++;
 }
 
 

@@ -59,6 +59,14 @@ void depozito() {
         cout << "Llogaria nuk ekziston!\n";
         return;
     }
+
+    cout << "Shuma per depozitim: ";
+    cin >> shuma;
+
+    if (shuma <= 0) {
+        cout << "Shuma duhet te jete pozitive!\n";
+        return;
+    }
 }
 
 

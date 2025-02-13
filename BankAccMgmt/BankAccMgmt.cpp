@@ -52,20 +52,21 @@ void krijoLlogari() {
 void depozito() {
     int id;
     double shuma;
+
     cout << "Jepni ID e llogarise: ";
     cin >> id;
 
-    if (id <= 0 || id > numriLlogarive || !llogarite[id - 1].aktive) {
-        cout << "Llogaria nuk ekziston!\n";
-        return;
+    while (!(id > 0 && id <= numriLlogarive && llogarite[id - 1].aktive)) {
+        cout << "Llogaria nuk ekziston! Ju lutem provoni perseri: ";
+        cin >> id;
     }
 
     cout << "Shuma per depozitim: ";
     cin >> shuma;
 
-    if (shuma <= 0) {
-        cout << "Shuma duhet te jete pozitive!\n";
-        return;
+    while (!(shuma > 0)) {
+        cout << "Shuma duhet te jete pozitive! Provoni perseri: ";
+        cin >> shuma;
     }
 
     llogarite[id - 1].bilanci += shuma;

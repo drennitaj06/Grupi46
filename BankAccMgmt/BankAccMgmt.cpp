@@ -42,6 +42,8 @@ void krijoLlogari() {
 
     llogarite[numriLlogarive] = l;
     numriLlogarive++;
+
+    cout << "Llogaria u krijua me sukses! ID e saj eshte: " << l.id << "\n";
 }
 
 

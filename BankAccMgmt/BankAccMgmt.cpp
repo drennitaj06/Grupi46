@@ -67,6 +67,10 @@ void depozito() {
         cout << "Shuma duhet te jete pozitive!\n";
         return;
     }
+
+    llogarite[id - 1].bilanci += shuma;
+    llogarite[id - 1].historia += "Depozitim: +" + to_string(shuma) + " EUR\n";
+    cout << "Depozitimi u krye me sukses!\n";
 }
 
 

@@ -54,6 +54,11 @@ void depozito() {
     double shuma;
     cout << "Jepni ID e llogarise: ";
     cin >> id;
+
+    if (id <= 0 || id > numriLlogarive || !llogarite[id - 1].aktive) {
+        cout << "Llogaria nuk ekziston!\n";
+        return;
+    }
 }
 
 

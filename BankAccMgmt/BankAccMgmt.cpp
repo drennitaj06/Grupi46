@@ -102,6 +102,22 @@ void terheq() {
 
 
 
+// Funksioni per te shfaqur bilancin e llogarise
+void shfaqBilancin() {
+    int id;
+    cout << "Jepni ID e llogarise: ";
+    cin >> id;
+
+    if (id <= 0 || id > numriLlogarive || !llogarite[id - 1].aktive) {
+        cout << "Llogaria nuk ekziston!\n";
+        return;
+    }
+
+    cout << "Bilanci aktual: " << fixed << setprecision(2) << llogarite[id - 1].bilanci << " EUR\n";
+}
+
+
+
 int main()
 {
     // Pika e hyrjes së programit, për momentin bosh

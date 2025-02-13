@@ -47,6 +47,17 @@ void krijoLlogari() {
 }
 
 
+
+// Funksioni per depozitimin e parave
+void depozito() {
+    int id;
+    double shuma;
+    cout << "Jepni ID e llogarise: ";
+    cin >> id;
+}
+
+
+
 int main()
 {
     // Pika e hyrjes së programit, për momentin bosh

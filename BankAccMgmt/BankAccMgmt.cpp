@@ -108,12 +108,16 @@ void shfaqBilancin() {
     cout << "Jepni ID e llogarise: ";
     cin >> id;
 
-    if (id <= 0 || id > numriLlogarive || !llogarite[id - 1].aktive) {
-        cout << "Llogaria nuk ekziston!\n";
-        return;
+    // Kontrollo nëse inputi është numer dhe brenda kufijve të lejuar
+    while (!(id > 0 && id <= numriLlogarive && llogarite[id - 1].aktive)) {
+        cout << "ID e pavlefshme! Ju lutem provoni perseri: ";
+        cin >> id;
     }
 
-    cout << "Bilanci aktual: " << fixed << setprecision(2) << llogarite[id - 1].bilanci << " EUR\n";
+    cout << "\n-------------------------\n";
+    cout << "Bilanci aktual per llogarine me ID " << id << ": "
+        << fixed << setprecision(2) << llogarite[id - 1].bilanci << " EUR\n";
+    cout << "-------------------------\n";
 }
 
 

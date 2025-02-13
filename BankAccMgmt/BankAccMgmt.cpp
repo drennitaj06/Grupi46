@@ -123,6 +123,26 @@ void shfaqBilancin() {
 }
 
 
+// Funksioni per te shfaqur detajet e llogarise
+void shfaqDetajet() {
+    int id;
+    cout << "Jepni ID e llogarise: ";
+    cin >> id;
+
+    while (!(id > 0 && id <= numriLlogarive && llogarite[id - 1].aktive)) {
+        cout << "Llogaria nuk ekziston! Ju lutem provoni perseri: ";
+        cin >> id;
+    }
+
+    Llogari l = llogarite[id - 1];
+
+    cout << "-------------------------\n";
+    cout << "ID: " << l.id << "\n";
+    cout << "Emri: " << l.emri << " " << l.mbiemri << "\n";
+    cout << "Bilanci: " << fixed << setprecision(2) << l.bilanci << " EUR\n";
+    cout << "-------------------------\n";
+}
+
 
 int main()
 {

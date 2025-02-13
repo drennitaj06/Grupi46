@@ -123,6 +123,7 @@ void shfaqBilancin() {
 }
 
 
+
 // Funksioni per te shfaqur detajet e llogarise
 void shfaqDetajet() {
     int id;
@@ -142,6 +143,49 @@ void shfaqDetajet() {
     cout << "Bilanci: " << fixed << setprecision(2) << l.bilanci << " EUR\n";
     cout << "-------------------------\n";
 }
+
+
+
+// Funksioni per te transferuar para nga nje llogari ne tjetren
+void transfero() {
+    int id1, id2;
+    double shuma;
+
+    // Marrja e ID së llogarisë që do të dërgojë para
+    cout << "Jepni ID e llogarise qe do te dergoje para: ";
+    cin >> id1;
+    while (id1 <= 0 || id1 > numriLlogarive || !llogarite[id1 - 1].aktive) {
+        cout << "Llogaria nuk ekziston! Ju lutem provoni perseri: ";
+        cin >> id1;
+    }
+
+    // Marrja e ID së llogarisë që do të pranojë para
+    cout << "Jepni ID e llogarise qe do te pranoje para: ";
+    cin >> id2;
+    while (id2 <= 0 || id2 > numriLlogarive || !llogarite[id2 - 1].aktive || id1 == id2) {
+        cout << "Llogaria nuk ekziston ose ID eshte e njejte me dhenesin! Provoni perseri: ";
+        cin >> id2;
+    }
+
+    // Marrja e shumës për transferim
+    cout << "Shuma per transferim: ";
+    cin >> shuma;
+    while (shuma <= 0 || shuma > llogarite[id1 - 1].bilanci) {
+        cout << "Shuma nuk eshte e vlefshme! Ju lutem provoni perseri: ";
+        cin >> shuma;
+    }
+
+    // Kryerja e transferimit
+    llogarite[id1 - 1].bilanci -= shuma;
+    llogarite[id2 - 1].bilanci += shuma;
+
+    // Regjistrimi i transaksionit në historinë e të dyja llogarive
+    llogarite[id1 - 1].historia += "Transferuar: -" + to_string(shuma) + " EUR tek llogaria " + to_string(id2) + "\n";
+    llogarite[id2 - 1].historia += "Marre: +" + to_string(shuma) + " EUR nga llogaria " + to_string(id1) + "\n";
+
+    cout << "Transferimi u krye me sukses!\n";
+}
+
 
 
 int main()

@@ -4,6 +4,8 @@
 #include <cmath>     // Librari për funksione matematikore
 using namespace std;
 
+
+
 const int MAX_ACCOUNTS = 100; // Numri maksimal i llogarive që mund të ruhen
 
 // Struktura që përfaqëson një llogari bankare
@@ -15,6 +17,11 @@ struct Llogari {
     string historia;   // Historia e transaksioneve
     bool aktive;       // Gjendja e llogarisë (aktive/inaktive)
 };
+
+Llogari llogarite[MAX_ACCOUNTS]; // Krijon një varg me objekte të tipit 'Llogari' me madhësi maksimale 'MAX_ACCOUNTS'.
+int numriLlogarive = 0;          // Inicializon një variabël që ruan numrin aktual të llogarive në 0.
+
+
 
 int main()
 {

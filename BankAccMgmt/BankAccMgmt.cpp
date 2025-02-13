@@ -23,6 +23,15 @@ int numriLlogarive = 0;          // Inicializon një variabël që ruan numrin aktu
 
 
 
+// Funksioni per krijimin e nje llogarie te re
+void krijoLlogari() {
+    if (numriLlogarive >= MAX_ACCOUNTS) {
+        cout << "Nuk mund te krijoni me shume llogari!\n";
+        return;
+    }
+}
+
+
 int main()
 {
     // Pika e hyrjes së programit, për momentin bosh

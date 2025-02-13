@@ -190,5 +190,27 @@ void transfero() {
 
 int main()
 {
-    // Pika e hyrjes së programit, për momentin bosh
-}
+    //Funksioni main
+        int zgjedhja;
+
+        do {
+            cout << "\n1. Hap Llogari\n2. Depozito\n3. Terheq\n4. Kontrollo Bilancin\n5. Shfaq Detajet\n6. Transfero Para\n7. Dil\nZgjedhja juaj: ";
+            cin >> zgjedhja;
+
+            switch (zgjedhja) {
+            case 1: krijoLlogari(); break;
+            case 2: depozito(); break;
+            case 3: terheq(); break;
+            case 4: shfaqBilancin(); break;
+            case 5: shfaqDetajet(); break;
+            case 6: transfero(); break;
+            case 7:
+                cout << "Dalje...\n";
+                return 0;
+            default:
+                cout << "Zgjedhje e pavlefshme!\n";
+            }
+        } while (zgjedhja != 8);
+
+        return 0;
+    }

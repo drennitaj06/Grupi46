@@ -99,3 +99,10 @@ void terheq() {
     llogarite[id - 1].historia += "Terheqje: -" + to_string(shuma) + " EUR\n";
     cout << "Terheqja u krye me sukses!\n";
 }
+
+
+
+int main()
+{
+    // Pika e hyrjes së programit, për momentin bosh
+}

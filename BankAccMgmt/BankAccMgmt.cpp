@@ -192,6 +192,7 @@ void shfaqHistorine() {
 
 
 
+
 int main() {
     int zgjedhja;
 

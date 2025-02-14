@@ -1,27 +1,23 @@
-#include <iostream>  // Librari për operacionet e hyrjes dhe daljes
-#include <iomanip>   // Librari për formatimin e daljes
-#include <string>    // Librari për manipulimin e vargjeve të karaktereve
-#include <cmath>     // Librari për funksione matematikore
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+
 using namespace std;
 
+const int MAX_ACCOUNTS = 100;
 
-
-const int MAX_ACCOUNTS = 100; // Numri maksimal i llogarive që mund të ruhen
-
-// Struktura që përfaqëson një llogari bankare
 struct Llogari {
-    int id;            // Identifikues unik për llogarinë
-    string emri;       // Emri i mbajtësit të llogarisë
-    string mbiemri;    // Mbiemri i mbajtësit të llogarisë
-    double bilanci;    // Bilanci i llogarisë
-    string historia;   // Historia e transaksioneve
-    bool aktive;       // Gjendja e llogarisë (aktive/inaktive)
+    int id;
+    string emri;
+    string mbiemri;
+    double bilanci;
+    string historia;
+    bool aktive;
 };
 
-Llogari llogarite[MAX_ACCOUNTS]; // Krijon një varg me objekte të tipit 'Llogari' me madhësi maksimale 'MAX_ACCOUNTS'.
-int numriLlogarive = 0;          // Inicializon një variabël që ruan numrin aktual të llogarive në 0.
-
-
+Llogari llogarite[MAX_ACCOUNTS];
+int numriLlogarive = 0;
 
 // Funksioni per krijimin e nje llogarie te re
 void krijoLlogari() {
@@ -45,8 +41,6 @@ void krijoLlogari() {
 
     cout << "Llogaria u krijua me sukses! ID e saj eshte: " << l.id << "\n";
 }
-
-
 
 // Funksioni per depozitimin e parave
 void depozito() {
@@ -75,8 +69,6 @@ void depozito() {
 }
 
 
-
-// Funksioni per terheqjen e parave
 void terheq() {
     int id;
     double shuma;
@@ -103,7 +95,6 @@ void terheq() {
 }
 
 
-
 // Funksioni per te shfaqur bilancin e llogarise
 void shfaqBilancin() {
     int id;
@@ -121,7 +112,6 @@ void shfaqBilancin() {
         << fixed << setprecision(2) << llogarite[id - 1].bilanci << " EUR\n";
     cout << "-------------------------\n";
 }
-
 
 
 // Funksioni per te shfaqur detajet e llogarise
@@ -143,7 +133,6 @@ void shfaqDetajet() {
     cout << "Bilanci: " << fixed << setprecision(2) << l.bilanci << " EUR\n";
     cout << "-------------------------\n";
 }
-
 
 
 // Funksioni per te transferuar para nga nje llogari ne tjetren
@@ -187,12 +176,25 @@ void transfero() {
 }
 
 
+// Funksioni per te shfaqur historine e transaksioneve
+void shfaqHistorine() {
+    int id;
+    cout << "Jepni ID e llogarise: ";
+    cin >> id;
+
+    while (!(id > 0 && id <= numriLlogarive && llogarite[id - 1].aktive)) {
+        cout << "Llogaria nuk ekziston! Ju lutem provoni perseri: ";
+        cin >> id;
+    }
+
+    cout << "Historia e transaksioneve:\n" << llogarite[id - 1].historia;
+}
 
 int main() {
     int zgjedhja;
 
     do {
-        cout << "\n1. Hap Llogari\n2. Depozito\n3. Terheq\n4. Kontrollo Bilancin\n5. Shfaq Detajet\n6. Transfero Para\n7. Dil\nZgjedhja juaj: ";
+        cout << "\n1. Hap Llogari\n2. Depozito\n3. Terheq\n4. Kontrollo Bilancin\n5. Shfaq Detajet\n6. Transfero Para\n7. Historia e Transaksioneve\n8. Dil\nZgjedhja juaj: ";
         cin >> zgjedhja;
 
         switch (zgjedhja) {
@@ -202,10 +204,11 @@ int main() {
         case 4: shfaqBilancin(); break;
         case 5: shfaqDetajet(); break;
         case 6: transfero(); break;
-        case 7: cout << "Dalje...\n"; break;
+        case 7: shfaqHistorine(); break;
+        case 8: cout << "Dalje...\n"; break;
         default: cout << "Zgjedhje e pavlefshme!\n";
         }
-    } while (zgjedhja != 7);
+    } while (zgjedhja != 8);
 
     return 0;
 }

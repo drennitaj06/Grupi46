@@ -101,7 +101,7 @@ void shfaqBilancin() {
     cout << "Jepni ID e llogarise: ";
     cin >> id;
 
-    // Kontrollo nëse inputi është numer dhe brenda kufijve të lejuar
+    // Kontrollo nÃ«se inputi Ã«shtÃ« numer dhe brenda kufijve tÃ« lejuar
     while (!(id > 0 && id <= numriLlogarive && llogarite[id - 1].aktive)) {
         cout << "ID e pavlefshme! Ju lutem provoni perseri: ";
         cin >> id;
@@ -140,7 +140,7 @@ void transfero() {
     int id1, id2;
     double shuma;
 
-    // Marrja e ID së llogarisë që do të dërgojë para
+    // Marrja e ID sÃ« llogarisÃ« qÃ« do tÃ« dÃ«rgojÃ« para
     cout << "Jepni ID e llogarise qe do te dergoje para: ";
     cin >> id1;
     while (id1 <= 0 || id1 > numriLlogarive || !llogarite[id1 - 1].aktive) {
@@ -148,7 +148,7 @@ void transfero() {
         cin >> id1;
     }
 
-    // Marrja e ID së llogarisë që do të pranojë para
+    // Marrja e ID sÃ« llogarisÃ« qÃ« do tÃ« pranojÃ« para
     cout << "Jepni ID e llogarise qe do te pranoje para: ";
     cin >> id2;
     while (id2 <= 0 || id2 > numriLlogarive || !llogarite[id2 - 1].aktive || id1 == id2) {
@@ -156,7 +156,7 @@ void transfero() {
         cin >> id2;
     }
 
-    // Marrja e shumës për transferim
+    // Marrja e shumÃ«s pÃ«r transferim
     cout << "Shuma per transferim: ";
     cin >> shuma;
     while (shuma <= 0 || shuma > llogarite[id1 - 1].bilanci) {
@@ -168,7 +168,7 @@ void transfero() {
     llogarite[id1 - 1].bilanci -= shuma;
     llogarite[id2 - 1].bilanci += shuma;
 
-    // Regjistrimi i transaksionit në historinë e të dyja llogarive
+    // Regjistrimi i transaksionit nÃ« historinÃ« e tÃ« dyja llogarive
     llogarite[id1 - 1].historia += "Transferuar: -" + to_string(shuma) + " EUR tek llogaria " + to_string(id2) + "\n";
     llogarite[id2 - 1].historia += "Marre: +" + to_string(shuma) + " EUR nga llogaria " + to_string(id1) + "\n";
 
@@ -189,8 +189,6 @@ void shfaqHistorine() {
 
     cout << "Historia e transaksioneve:\n" << llogarite[id - 1].historia;
 }
-
-
 
 
 int main() {

@@ -10,14 +10,30 @@ Ky projekt është një program i zhvilluar në gjuhën C++ që simulon një sis
 
 ## Funksionalitetet
 
-- ✅ Hapja e një llogarie të re (Me ID unike)  
-- ✅ Depozitimi i parave  
-- ✅ Tërheqja e parave  
-- ✅ Kontrollimi i bilancit të llogarisë  
-- ✅ Shfaqja e detajeve të llogarisë  
-- ✅ Transferimi i parave midis llogarive  
-- ✅ Shfaqja e historisë së transaksioneve  
-- ✅ Mbyllja e programit në mënyrë të sigurt  
+- ✅ Hapja e një llogarie të re (Me ID unike)
+
+![Image](https://github.com/user-attachments/assets/7d4b07e2-34b4-448c-bada-29d785d1191c)  
+- ✅ Depozitimi i parave
+
+![Image](https://github.com/user-attachments/assets/f50eee88-789e-4fbc-8c80-2931b42d169a)
+- ✅ Tërheqja e parave
+
+![Image](https://github.com/user-attachments/assets/9fe318ae-eb64-48b6-98f0-425e4142b053)
+- ✅ Kontrollimi i bilancit të llogarisë
+
+![Image](https://github.com/user-attachments/assets/e8ad2c91-6a1a-44cf-ad11-6c7a013c0482)
+- ✅ Shfaqja e detajeve të llogarisë
+
+![Image](https://github.com/user-attachments/assets/d0a1a3cb-f5c7-4759-8bf7-a13f1063c57c)
+- ✅ Transferimi i parave midis llogarive
+
+![Image](https://github.com/user-attachments/assets/81eed938-6863-4174-aae7-fd5b34fd5bfc)
+- ✅ Shfaqja e historisë së transaksioneve
+
+![Image](https://github.com/user-attachments/assets/a501a024-e8b5-43f0-9182-646706737e92)
+- ✅ Mbyllja e programit në mënyrë të sigurt
+
+![Image](https://github.com/user-attachments/assets/5d731bdd-02a9-4a9d-961f-24e73967618d)
 
 
 ## Instalimi dhe Përdorimi

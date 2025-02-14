@@ -205,7 +205,7 @@ int main() {
         case 7: cout << "Dalje...\n"; break;
         default: cout << "Zgjedhje e pavlefshme!\n";
         }
-    } while (zgjedhja != 8);
+    } while (zgjedhja != 7);
 
     return 0;
 }

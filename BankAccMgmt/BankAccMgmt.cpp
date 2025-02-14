@@ -190,6 +190,8 @@ void shfaqHistorine() {
     cout << "Historia e transaksioneve:\n" << llogarite[id - 1].historia;
 }
 
+
+
 int main() {
     int zgjedhja;
 

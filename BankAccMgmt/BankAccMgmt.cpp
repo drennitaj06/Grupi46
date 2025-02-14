@@ -68,7 +68,7 @@ void depozito() {
     cout << "Depozitimi u krye me sukses!\n";
 }
 
-
+// Funksioni per terheqjen e parave
 void terheq() {
     int id;
     double shuma;
